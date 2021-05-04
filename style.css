@@ -1,0 +1,421 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --darkgrey: hsl(0, 0%, 55%);
+    --verydarkgrey: hsl(0, 0%, 41%);
+}
+
+header {
+    position: absolute;
+    color: var(--white);
+    width: 100%;
+    top: .5em;
+    left: -1.3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+header ul:nth-child(1) {
+    font-size: 34px;
+}
+
+.dropbtn {
+    color: var(--black);
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+#aboutlist {
+    display: none;
+    position: absolute;
+    height: 30em;
+    top: 0px;
+    left: .9em;
+    right: 0;
+    background-color: var(--black);
+    width: 90%;
+    z-index: 1;
+    padding: 1em;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+#aboutlist li:nth-child(1) {
+    margin-bottom: 3.5em;
+    text-transform: none;
+    font-size: 35px;
+    margin-top: .5em;
+}
+#aboutlist li {
+    margin-bottom: 1em;
+}
+
+.closebtn {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--white);
+    float: right;  
+    position: relative;
+    bottom: 7px;
+}
+
+main {
+    width: 100%;
+}
+
+.hero {
+    background-image: url(images/mobile/image-hero.jpg);
+    height: 50em;
+    
+}
+
+.hero h4 {
+    width: 70%;
+    height: 4em;
+    margin: auto;
+    align-content: center;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 1em;
+    position: relative;
+    top: 10em;
+    font-size: 29px;
+    font-weight: lighter;
+    text-size-adjust: 20%;
+    
+}
+
+/* interactive section */
+
+.interactive {
+    margin-top: 5rem;
+    justify-content: center;
+    text-align: center;
+}
+.interactive img {
+    width: 85vw;
+}
+.interactive h1 {
+    text-transform: uppercase;
+    width: 75%;
+    margin: 1em auto 1em auto;
+}
+.interactive p {
+    width: 75%;
+    margin: 1em auto 1em auto;
+    color: var(--darkgrey);
+}
+
+/* creations section */
+
+.creations {
+    width: 85vw;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 6em auto 6em auto;
+}
+.creations h1 {
+    width: 100%;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.creations img {
+    width: 100%;
+    height: 9em;
+    margin-bottom: -2em;
+} 
+.creations article {
+    position: relative;
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 300;
+    bottom: 2em;
+    left: 1em;
+}
+
+#btn {
+    padding: 0 25%;
+}
+
+.creations div button {
+    color: var(--black);
+    text-transform: uppercase;
+    width: 50%;
+    margin-left: 25%;
+    height: 45px;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid var(--black);
+}
+.creations-desktop {
+    display: none;
+}
+
+/* footer */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    height: 20rem;
+}
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+footer ul:nth-child(1) {
+    font-size: 2rem;
+
+}
+footer ul:nth-child(2)  {
+    margin-top: 25px;
+}
+footer ul:nth-child(2) * {
+    margin-bottom: 13px;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+footer .social-links * {
+    margin: auto 5px;
+}
+
+@media screen and (min-width: 730px) {
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        display: flex;
+        position: absolute;
+        color: var(--white);
+        width: 80%;
+        top: .5em;
+        left: 3em;
+    }
+    header ul:nth-child(1) {
+        align-self: flex-start;
+    }
+    header ul:nth-child(2) {
+        display: none;
+    }
+    #aboutlist {
+        display: flex;
+        position: relative;
+        padding-top: 0;
+        left: 8em;
+        background-color: unset;
+        text-transform: unset;
+        font-size: 15px;
+        top: 20px;
+        justify-content: end;
+        margin-left: 20em;
+    }
+    #aboutlist * {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    #aboutlist li:nth-child(1) {
+        display: none;
+    }
+    header button {
+        display:none;
+    }
+
+    .hero {
+        background-image: url(images/desktop/image-hero.jpg);
+        background-repeat: no-repeat; 
+             
+    }
+    .hero h4 {
+        width: 50%;
+        margin: 0 0 0 2.5em;
+        justify-content: left;
+        text-transform: uppercase;
+        color: var(--white);
+        border: 2px solid var(--white);
+        padding: 1em;
+        position: relative;
+        top: 10em;
+        font-size: 35px;
+        font-weight: lighter;
+        text-size-adjust: 20%;   
+    }
+
+    .interactive {
+        margin: 0 2em;
+        text-align: left;
+        display: flex;
+    }
+    .interactive img {
+        width: 50%;
+        position: absolute;
+        left: 6em;
+    }
+    .interactive div:nth-child(2) {
+        position: relative;
+        width: 50%;
+        color: var(--verydarkgrey);
+        background-color: var(--white);
+        top: 19.3em;
+        left: 20%;
+        height: 80%;
+        padding: 1em;
+    }
+
+    .creations {
+        display: none;
+    }
+
+    .creations-desktop {
+        margin-top: 25em;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 60px auto auto;
+        width: 85vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    
+    .creations-desktop h1 {
+        grid-column: 1 /3;
+        grid-row: 1;
+        text-transform: uppercase;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .creations-desktop .btn {
+        grid-column: 3/5;
+        grid-row: 1;
+        padding: 0 1em ;
+        justify-self: right;
+        justify-content: right;
+        width: 100%;
+    }
+    .creations-desktop button {
+        color: var(--black);
+        text-transform: uppercase;
+        width: 30%;
+        height: 100%;
+        font-size: 1em;
+        font-weight: 600;
+        border: 1px solid var(--black);
+        padding: 0;
+        float: right;
+        
+    }
+    .creations-desktop #deep {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .creations-desktop #night {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .creations-desktop #soccer {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .creations-desktop #grid {
+        grid-column: 4;
+        grid-row: 2;
+    }
+    .creations-desktop #from {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .creations-desktop #pocket {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .creations-desktop #curiosity {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .creations-desktop #fisheye {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    .creations-desktop img {
+        margin-bottom: -2em;
+    
+    } 
+    .creations-desktop img:hover {
+        opacity: .4;
+    }
+    .creations-desktop article {
+        position: relative;
+        color: var(--darkgrey);
+        font-size: 2em;
+        font-weight: 300;
+        bottom: 2em;
+        left: 1em;
+        text-transform: uppercase;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60px auto;
+        padding: 2em 5em;
+        height: 70px;
+    }
+    footer ul:nth-child(1) {
+        grid-column: 1;
+        justify-self: left;
+        grid-row: 1;
+    
+    }
+    footer ul:nth-child(2) {
+        grid-column: 1;
+        display: flex;
+        grid-row: 2;
+        margin-top: 1px;
+    }
+    footer ul:nth-child(2) * {
+        margin-right: 2em;
+    }
+    footer ul:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: right;
+        margin-top: 0;
+    }
+    footer div {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: right;
+    }
+
+}
